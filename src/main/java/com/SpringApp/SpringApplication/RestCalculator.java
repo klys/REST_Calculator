@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
@@ -29,7 +30,7 @@ public class RestCalculator  {
 	"/sum/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}",
 	"/sum/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}",
 	"/sum/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}/{n10}"}, 
-	produces = "application/json; charset=UTF-8")
+	produces = "application/json; charset=UTF-8", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Integer> sum(@PathVariable(required = false) Integer n1 , 
 	@PathVariable(required = false) Integer n2, 
@@ -115,7 +116,7 @@ public class RestCalculator  {
 	"/sub/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}",
 	"/sub/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}",
 	"/sub/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}/{n10}"}, 
-	produces = "application/json; charset=UTF-8")
+	produces = "application/json; charset=UTF-8", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Integer> sub(@PathVariable(required = false) Integer n1 , 
 	@PathVariable(required = false) Integer n2, 
@@ -198,7 +199,7 @@ public class RestCalculator  {
 	"/mul/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}",
 	"/mul/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}",
 	"/mul/{n1}/{n2}/{n3}/{n4}/{n5}/{n6}/{n7}/{n8}/{n9}/{n10}"}, 
-	produces = "application/json; charset=UTF-8")
+	produces = "application/json; charset=UTF-8", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Integer> mul(@PathVariable(required = false) Integer n1 , 
 	@PathVariable(required = false) Integer n2, 
